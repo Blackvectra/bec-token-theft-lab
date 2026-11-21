@@ -20,6 +20,8 @@ assumed.
 | Path | Contents |
 |---|---|
 | [`PLAN.md`](PLAN.md) | Decisions and 30-day schedule |
+| [`SKILLS-MAP.md`](SKILLS-MAP.md) | Lab steps mapped to SC-300, SC-100, held certs, and engineering roles |
+| [`baseline/`](baseline/) | Baseline activity script and Pester tests |
 | [`lab-setup.md`](lab-setup.md) | Tenant, licensing, Sentinel, budget guardrails, teardown |
 | [`attack-plan.md`](attack-plan.md) | Scenario, ATT&CK mapping, the ground-truth action log |
 | [`investigation/`](investigation/) | Timeline, findings with evidence, visibility gaps |
