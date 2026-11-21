@@ -1,0 +1,4 @@
+# Raw, unsanitized exports never leave the machine.
+evidence/raw/
+*.har
+cookies*.json

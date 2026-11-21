@@ -1,0 +1,10 @@
+// New or modified inbox rules that forward, redirect, delete, or move mail.
+// Status: UNTESTED. Parameter shapes vary by client; inspect raw rows first.
+let lookback = 7d;
+OfficeActivity
+| where TimeGenerated > ago(lookback)
+| where Operation in ("New-InboxRule", "Set-InboxRule", "UpdateInboxRules")
+| extend Params = tostring(Parameters)
+| where Params has_any ("ForwardTo", "RedirectTo", "ForwardAsAttachmentTo", "DeleteMessage", "MoveToFolder", "MarkAsRead")
+| project TimeGenerated, UserId, ClientIP, Operation, Params
+| order by TimeGenerated desc

@@ -1,0 +1,15 @@
+// One sign-in session used from more than one IP address.
+// Status: UNTESTED. SessionId is populated for most, not all, sign-in types.
+let lookback = 7d;
+union isfuzzy=true SigninLogs, AADNonInteractiveUserSignInLogs
+| where TimeGenerated > ago(lookback)
+| where ResultType == "0"
+| where isnotempty(SessionId)
+| summarize
+    IPs = make_set(IPAddress, 20),
+    UserAgents = make_set(UserAgent, 20),
+    FirstSeen = min(TimeGenerated),
+    LastSeen = max(TimeGenerated)
+    by UserPrincipalName, SessionId
+| where array_length(IPs) > 1
+| order by LastSeen desc

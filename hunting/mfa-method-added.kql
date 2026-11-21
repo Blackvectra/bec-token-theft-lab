@@ -1,0 +1,9 @@
+// Authentication methods registered by users.
+// Status: UNTESTED. Compare the sign-in IP for the same user and time window.
+let lookback = 7d;
+AuditLogs
+| where TimeGenerated > ago(lookback)
+| where OperationName has "registered security info"
+| extend UPN = tostring(TargetResources[0].userPrincipalName)
+| project TimeGenerated, UPN, OperationName, Result, InitiatedBy
+| order by TimeGenerated desc
