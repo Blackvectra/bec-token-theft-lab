@@ -44,7 +44,7 @@ untouched here. Projects that cover them:
 | SC-300: Token protection, session management, CAE, authentication context, protected actions | Recommended only | Project 3, rerunning this attack as the "after" test |
 | SC-300: Entitlement management, access reviews, terms of use | Not used | Project 3 stretch, or a small governance lab |
 | SC-300: Workload identities, app registrations, managed identities, Defender for Cloud Apps policies | Only Graph consent | Project 2 (CI service principal), drift monitor backlog item |
-| SC-300: Hybrid identity (Connect Sync, Cloud Sync, PTA, AD FS migration) | Not used | Needs an AD DS lab VM; add to backlog if wanted |
+| SC-300: Hybrid identity (Connect Sync, Cloud Sync, PTA, AD FS migration) | Not used here | Already built in a separate hybrid identity lab (link to add) |
 | SC-300: External identities, cross-tenant access, Global Secure Access | Not used | Backlog |
 | SC-100: Infrastructure, posture management (Defender for Cloud, MCSB, Azure Policy, landing zones) | Not used | Azure landing zone backlog item |
 | SC-100: Data and application security (Purview, Key Vault, WAF, AI) | Not used | Backlog |
