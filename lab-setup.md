@@ -21,7 +21,9 @@ window. Do all planning before sign-up.
 | 1 | Sign up for the E5 trial as a new tenant (new `*.onmicrosoft.com`). Record sign-up date and trial end date. | |
 | 2 | Add `nextlayersec.co` as a custom domain. Publish SPF (`-all`), DKIM, DMARC `p=reject`. | |
 | 3 | Create a break-glass Global Admin (excluded from lab CA policies) and a separate admin for daily work. | |
-| 4 | Create fake users: `ceo`, `finance`, `victim` (the phishing target), `helpdesk`. | |
+| 4 | Create fake users: `ceo`, `finance`, `victim` (the phishing target), `helpdesk`, and `collector` (attacker forwarding target, D6). | |
+| 4a | Turn security defaults off; create one CA policy requiring MFA for all users, excluding break-glass (D5). | |
+| 4b | Onboard the local Windows 11 VM to Defender for Endpoint; `victim` signs in only there (D2). | |
 | 5 | Enable unified audit logging; confirm mailbox auditing is on. | |
 | 6 | Create Azure subscription in the lab tenant. Set a **budget alert at $25/month** with email to the admin. | |
 | 7 | Create a Log Analytics workspace + Sentinel. Confirm the free-trial banner and its end date. | |

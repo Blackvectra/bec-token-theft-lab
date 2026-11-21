@@ -19,7 +19,7 @@ uses the mailbox to send a payment-change request to `finance`.
 | Session replay | Import cookies into browser B on a different network (hotspot or VPN exit) and access Outlook on the web | T1550.004 Use Alternate Authentication Material: Web Session Cookie; T1078.004 Valid Accounts: Cloud Accounts |
 | Persistence | Register an additional MFA method from the replayed session | T1556.006 Modify Authentication Process: Multi-Factor Authentication |
 | Defense evasion / collection | Inbox rule that moves messages containing "invoice", "payment", "wire" to RSS Feeds and marks them read | T1564.008 Hide Artifacts: Email Hiding Rules |
-| Collection | Forwarding rule to an attacker-controlled lab mailbox | T1114.003 Email Collection: Email Forwarding Rule |
+| Collection | Forwarding rule to the internal `collector@` lab mailbox (external auto-forwarding is blocked by default in Exchange Online; noted as a control) | T1114.003 Email Collection: Email Forwarding Rule |
 | Impact | Internal email to `finance` requesting a change of bank details | T1534 Internal Spearphishing |
 
 Not simulated: public adversary-in-the-middle phishing kits. They require

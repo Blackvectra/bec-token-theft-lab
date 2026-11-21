@@ -19,6 +19,7 @@ assumed.
 
 | Path | Contents |
 |---|---|
+| [`PLAN.md`](PLAN.md) | Decisions and 30-day schedule |
 | [`lab-setup.md`](lab-setup.md) | Tenant, licensing, Sentinel, budget guardrails, teardown |
 | [`attack-plan.md`](attack-plan.md) | Scenario, ATT&CK mapping, the ground-truth action log |
 | [`investigation/`](investigation/) | Timeline, findings with evidence, visibility gaps |
